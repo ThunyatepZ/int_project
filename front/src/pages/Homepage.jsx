@@ -1,8 +1,9 @@
 import React from 'react'
+import { PulseLoader   } from 'react-spinners'
 
 function Homepage() {
   return (
-    <div>Homepage</div>
+    <div className='flex justify-center w-screen'><PulseLoader  color='#ff793f'/></div>
   )
 }
 
