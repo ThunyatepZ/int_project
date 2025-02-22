@@ -13,6 +13,9 @@ export default {
       // },
       fontFamily:{
         title:["Dosis"],
+      },
+      backgroundImage:{
+        bannerImg:"url('/futuristic-illuminated-hallway-with-beautiful-abstract-light-effects.jpg')"
       }
     },
   },
