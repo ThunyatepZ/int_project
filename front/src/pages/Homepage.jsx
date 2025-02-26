@@ -13,6 +13,7 @@ function Homepage() {
       clearTimeout(time);
     })
   }, [])
+  
   return load ? <div className='flex justify-center items-center h-screen'><PulseLoader color='#ff793f' /></div> : (
       <div className=''>
       <Navbar/>
