@@ -22,10 +22,10 @@ function Homepage() {
       </div>
       <div className='scroll-smooth flex flex-col justify-center items-center w-full h-screen'>
         <div className="w-fit">
-          <h1 className="mb-20 animate-typing delay-100 overflow-hidden whitespace-nowrap border-r-4 border-r-white text-5xl text-white font-bold">
+          <div className="mb-20 animate-typing delay-100 overflow-hidden whitespace-nowrap border-r-4 border-r-white text-5xl text-white font-bold">
             Welcome!
-            <h1 className='border-r-white text-5xl text-white font-bold'>to Sign Hand Prediction!</h1>
-          </h1>
+            <div className='border-r-white text-5xl text-white font-bold'>to Sign Hand Prediction!</div>
+          </div>
         </div>
         <div className='animate-bounce text-white bg-gray-500 px-8 py-3 rounded-xl'>
           <a href="#tap2">Start</a>
