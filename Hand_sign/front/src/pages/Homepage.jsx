@@ -14,17 +14,27 @@ function Homepage() {
       clearTimeout(time);
     })
   }, [])
-  
+
   return load ? <div className='flex justify-center items-center h-screen'><PulseLoader color='#ff793f' /></div> : (
-      <div className='bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-slate-900 to-black w-screen h-screen'>
-      <Navbar/>
-        <div class="w-max grid justify-items-center ... py-60">
-          <h1 class="animate-typing delay-50 overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-5xl text-white font-bold flex-row">
+    <div className='scroll-smooth bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-slate-900 to-black overflow-hidden'>
+      <div className='fixed w-full'>
+        <Navbar />
+      </div>
+      <div className='flex flex-col justify-center items-center w-full h-screen'>
+        <div className="w-fit">
+          <h1 className="mb-20 animate-typing delay-100 overflow-hidden whitespace-nowrap border-r-4 border-r-white text-5xl text-white font-bold">
             Welcome!
-            <h1 className='border-r-white pr-5 text-5xl text-white font-bold flex-row'>to Sign Hand Prediction!</h1>
+            <h1 className='border-r-white text-5xl text-white font-bold'>to Sign Hand Prediction!</h1>
           </h1>
         </div>
-      </div>  
+        <div className='animate-bounce text-white bg-gray-500 px-8 py-3 rounded-xl'>
+          Start
+        </div>
+      </div>
+      <div className='bg-green-400 w-full h-screen'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque aperiam ratione quo repudiandae, labore vel eveniet incidunt atque similique optio! Quidem, vitae natus possimus cumque assumenda ea laboriosam incidunt aliquid.
+      </div>
+    </div>
   )
 }
 
