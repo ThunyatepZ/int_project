@@ -16,11 +16,11 @@ function Homepage() {
   }, [])
 
   return load ? <div className='flex justify-center items-center h-screen'><PulseLoader color='#ff793f' /></div> : (
-    <div className='scroll-smooth bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-slate-900 to-black overflow-hidden'>
+    <div className='scroll-smooth  overflow-hidden '>
       <div className='fixed w-full'>
         <Navbar />
       </div>
-      <div className='flex flex-col justify-center items-center w-full h-screen'>
+      <div className='scroll-smooth flex flex-col justify-center items-center w-full h-screen'>
         <div className="w-fit">
           <h1 className="mb-20 animate-typing delay-100 overflow-hidden whitespace-nowrap border-r-4 border-r-white text-5xl text-white font-bold">
             Welcome!
@@ -28,11 +28,15 @@ function Homepage() {
           </h1>
         </div>
         <div className='animate-bounce text-white bg-gray-500 px-8 py-3 rounded-xl'>
-          Start
+          <a href="#tap2">Start</a>
         </div>
       </div>
-      <div className='bg-green-400 w-full h-screen'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque aperiam ratione quo repudiandae, labore vel eveniet incidunt atque similique optio! Quidem, vitae natus possimus cumque assumenda ea laboriosam incidunt aliquid.
+      <div id='tap2' className=' w-full h-screen text-white'>
+        <div className='absolute flex justify-center items-center w-full h-full'>
+          <div className='w-[500px]'>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptatum pariatur laborum delectus tempora consequuntur eos, impedit deserunt officia omnis! Eum dolore mollitia fuga rem deleniti unde harum quam perspiciatis.
+          </div>
+        </div>
       </div>
     </div>
   )
