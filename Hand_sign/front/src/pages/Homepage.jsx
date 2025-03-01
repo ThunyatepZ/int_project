@@ -28,7 +28,7 @@ function Homepage() {
           </div>
         </div>
         <button className='animate-bounce text-white bg-gray-500 px-8 py-3 rounded-xl' onClick={() => document.getElementById('tap2').scrollIntoView({ behavior: 'smooth' })}>
-          Start
+          Get Info
         </button>
       </div>
       <div id='tap2' className=' w-full h-screen text-white'>

@@ -1,10 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
+import Navbar from '@/components/Navbar'
 
 const Machine = () => {
   return (
     <div>
-      Info page
+      <Navbar/>
+      Machine Page
     </div>
   )
 }
