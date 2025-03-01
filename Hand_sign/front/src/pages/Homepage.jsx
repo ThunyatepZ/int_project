@@ -1,8 +1,6 @@
-import React from 'react'
+import Navbar from '@/components/Navbar'
 import { useEffect, useState } from 'react'
 import { PulseLoader } from 'react-spinners'
-import Navbar from '@/components/Navbar'
-import Link from 'next/link'
 
 function Homepage() {
   const [load, setload] = useState(true)
