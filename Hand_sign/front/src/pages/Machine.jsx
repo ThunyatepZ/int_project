@@ -1,25 +1,29 @@
-import axios from "axios"
-import { useEffect, useState } from "react"
+import React from 'react'
+import Navbar from '@/components/Navbar'
+import DrawingCanvas from '@/components/canvas'
 
-const Machine = () => {
-  const [data, setdata] = useState(null)
-  useEffect(() => {
-    axios.get("http://127.0.0.1:8000/data").then((res) => (
-      setdata(res.data)
-    )).catch((error) => console.error("Error:", error))
-
-  }, [])
-  console.log(data)
+function Machine() {
   return (
     <div>
-      <div id="1" className="text-white">
-        {data && (
-          `${data.message}`
-        )}
+      <div className='fixed w-full'>
+        <Navbar />
+      </div>
+      <div className='flex justify-center items-center w-screen h-screen'>
+        <div className='absolute flex justify-center w-screen h-screen items-start text-white mt-32'>
+          Machine learning predic number 0-9!!!
+        </div>
+        <div className='absolute flex justify-center items-center text-white h-full w-screen'>
+          <DrawingCanvas width={500} height={500} />
+        </div>
+      </div>
+      <div className='flex justify-center items-center w-screen h-screen'>
+        <div className='w-[50%]'>
+          <img src={"/image.png"} />
+        </div>
       </div>
 
-      Machine Page
     </div>
+
   )
 }
 
