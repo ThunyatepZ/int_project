@@ -17,5 +17,3 @@ venv/
 # Ignore system files
 .DS_Store
 Thumbs.db
-
-/models/digit_classifier.h5
