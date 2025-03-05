@@ -1,5 +1,4 @@
 import cv2
-import matplotlib.pyplot as plt
 import numpy as np
 from tensorflow.keras.models import load_model
 
@@ -33,11 +32,11 @@ def predict_number(image_path):
     if input_image is None:
         return None
 
-    # 📌 แสดงภาพที่ใช้ทดสอบ
-    plt.imshow(input_image[0, :, :, 0], cmap="gray")
-    plt.title("🔍 รูปที่ใช้ทดสอบ")
-    plt.axis("off")
-    plt.show()
+    # 📌 ไม่ต้องแสดงภาพที่ใช้ทดสอบ
+    # plt.imshow(input_image[0, :, :, 0], cmap="gray")
+    # plt.title("🔍 รูปที่ใช้ทดสอบ")
+    # plt.axis("off")
+    # plt.show()
 
     # 📌 ทำนายผลลัพธ์
     prediction = model.predict(input_image)
