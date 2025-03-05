@@ -17,7 +17,7 @@ function Machine() {
       const response = await axios.post('https://int-project.onrender.com/predict', { image: base64Image });
 
       console.log("์Numer is :", response.data);
-      alert("suck");
+      alert(`Number is : ${response.data.prediction}`);
     } catch (error) {
       console.error("Error sending Base64:", error);
       alert("เกิดข้อผิดพลาดในการส่ง Base64");
