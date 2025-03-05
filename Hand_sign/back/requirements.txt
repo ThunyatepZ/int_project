@@ -11,3 +11,4 @@ numpy
 pydantic
 opencv-python
 tensorflow
+uvicorn
