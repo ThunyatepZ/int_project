@@ -1,6 +1,6 @@
-import { useRef, useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const DrawingCanvas = ({ width = 500, height = 500, color = "black" }) => {
+const DrawingCanvas = ({ width = 500, height = 500, color = "black", lw = 40, onConvertToBase64 }) => {
   const canvasRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
 
@@ -9,7 +9,7 @@ const DrawingCanvas = ({ width = 500, height = 500, color = "black" }) => {
     const ctx = canvas.getContext("2d");
     ctx.fillStyle = "white";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.lineWidth = 3;
+    ctx.lineWidth = lw;
     ctx.lineCap = "round";
     ctx.strokeStyle = color;
   }, [color]);
@@ -42,13 +42,12 @@ const DrawingCanvas = ({ width = 500, height = 500, color = "black" }) => {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
   };
 
-  const saveCanvas = () => {
+  const convertToBase64 = () => {
     const canvas = canvasRef.current;
-    const image = canvas.toDataURL("image/png");
-    const link = document.createElement("a");
-    link.href = image;
-    link.download = "drawing.png";
-    link.click();
+    const base64Image = canvas.toDataURL("image/png");
+    if (onConvertToBase64) {
+      onConvertToBase64(base64Image); // ส่งค่า Base64 ออกไปให้ `Machine.js`
+    }
   };
 
   return (
@@ -65,7 +64,9 @@ const DrawingCanvas = ({ width = 500, height = 500, color = "black" }) => {
       />
       <div style={{ marginTop: "10px" }}>
         <button className="bg-white p-2 rounded-lg text-black" onClick={clearCanvas}>clear</button>
-        <button className="bg-white p-2 rounded-lg text-black" onClick={saveCanvas} style={{ marginLeft: "10px" }}>click here to predic</button>
+        <button className="bg-white p-2 rounded-lg text-black ml-2" onClick={convertToBase64}>
+          Convert to Base64
+        </button>
       </div>
     </div>
   );
