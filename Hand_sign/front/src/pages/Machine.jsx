@@ -14,7 +14,7 @@ function Machine() {
     }
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/predict', { image: base64Image });
+      const response = await axios.post('https://int-project.onrender.com/predict', { image: base64Image });
 
       console.log("์Numer is :", response.data);
       alert("suck");
