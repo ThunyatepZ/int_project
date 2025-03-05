@@ -1,10 +1,9 @@
 import base64
 import io
-
 import numpy as np
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from models import number
+from Models import number
 from PIL import Image
 from pydantic import BaseModel
 
