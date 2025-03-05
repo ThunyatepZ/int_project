@@ -1,12 +1,14 @@
-import io
 import base64
+import io
+
 import numpy as np
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from models import number
 from PIL import Image
-from Models import number
-  # ✅ Import ไฟล์ number.py
+from pydantic import BaseModel
+
+# ✅ Import ไฟล์ number.py
 
 app = FastAPI()
 
