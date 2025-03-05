@@ -3,8 +3,8 @@ import io
 import numpy as np
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from Models import number
 from PIL import Image
+from number import predict_number
 from pydantic import BaseModel
 
 # ✅ Import ไฟล์ number.py
@@ -37,7 +37,7 @@ async def predict_digit(data: ImageData):
         Image.fromarray(image).save(temp_path)
 
         # ✅ ใช้โมเดลพยากรณ์
-        result = number.predict_number(temp_path)
+        result = predict_number(temp_path)
 
         return {"prediction": int(result)}
 

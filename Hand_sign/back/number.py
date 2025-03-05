@@ -3,7 +3,7 @@ import numpy as np
 from tensorflow.keras.models import load_model
 
 # 📌 โหลดโมเดลจากไฟล์ .h5
-MODEL_PATH = "models/digit_classifier.h5"  # แก้ให้เป็น path ของคุณ
+MODEL_PATH = "Models/digit_classifier.h5"  # แก้ให้เป็น path ของคุณ
 model = load_model(MODEL_PATH)
 print("✅ โมเดลถูกโหลดสำเร็จ!")
 
