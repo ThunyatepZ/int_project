@@ -1,8 +1,6 @@
 import Navbar from '@/components/Navbar'
 import { useEffect, useState } from 'react'
 import { PulseLoader } from 'react-spinners'
-import infomation from '@/components/infomation'
-import Image from 'next/image'
 
 function Homepage() {
   const [load, setload] = useState(true)
@@ -32,6 +30,9 @@ function Homepage() {
         </button>
       </div>
       <div id='tap2' className='w-full h-screen text-white'>
+        <div className='flex justify-center items-center h-screen text-center'>
+
+        </div>
       </div>
     </div>
   )

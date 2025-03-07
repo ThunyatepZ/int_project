@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar';
-import DrawingCanvas from '@/components/canvas';
-import { useState } from 'react';
 import axios from 'axios'; // ✅ นำเข้า axios
+import Link from 'next/link';
+import { useState } from 'react';
 
 function Machine() {
   const [base64Image, setBase64Image] = useState('');
@@ -27,31 +27,38 @@ function Machine() {
   return (
     <div>
       <Navbar />
-      <div className='flex justify-center items-center w-screen h-screen'>
-        <div className='absolute flex justify-center w-screen h-screen items-start text-white mt-32'>
-          Machine learning predicts number 0-9!!!
-        </div>
-        <div className='absolute flex flex-col justify-center items-center text-white h-full w-screen'>
-          <DrawingCanvas width={500} height={500} onConvertToBase64={setBase64Image} />
-          
-          {base64Image ? (
-            <div className="mt-4 flex flex-col items-center w-full max-w-lg">
-              <textarea
-                className="w-full h-40 p-2 text-sm bg-gray-800 text-white rounded"
-                value={base64Image}
-                readOnly
-              />
-              <button
-                className="mt-2 px-4 py-2 bg-blue-500 text-white rounded"
-                onClick={handleSendToBackend}
-              >
-                Send to Backend
-              </button>
+      <div className='flex justify-center items-center w-full h-screen'>
+      <div className='bg-white text-black w-[1000px] h-[600px] rounded-2xl overflow-auto'>
+            <div className='ml-2 mr-2'>
+              <span className='flex justify-center mt-2 text-xl'>Machine Learning</span>
+              <span className=''>MLตัวนี้เริ่มจากที่กลุ่มผมได้ไปค้นหาData setใน Kaggle จนผมได้ข้อมูลที่ต้องการจะนำมาใช้นั่นก็คือข้อมูลภาพลายมือเลข0-9</span>
+              <span className=''>และผมจะแปะลิ่งไว้เผื่อผู้ชมจะไปลองดูครับ {<Link href='https://www.kaggle.com/datasets/aquibiqbal/digits-09'>ที่มา digits-09</Link>}</span>
+              <div>
+                <div id='header' className='text-xl text-start ml-5'>* feature of this Dataset</div>
+                <span className='flex flex-col justify-start items-start ml-5'>
+                  <li>รูปภาพเลข 0 จำนวน 1176รูป</li>
+                  <li>รูปภาพเลข 1 จำนวน 1150รูป</li>
+                  <li>รูปภาพเลข 2 จำนวน 1141รูป</li>
+                  <li>รูปภาพเลข 3 จำนวน 1121รูป</li>
+                  <li>รูปภาพเลข 4 จำนวน 1118รูป</li>
+                  <li>รูปภาพเลข 5 จำนวน 1135รูป</li>
+                  <li>รูปภาพเลข 6 จำนวน 1135รูป</li>
+                  <li>รูปภาพเลข 7 จำนวน 1119รูป</li>
+                  <li>รูปภาพเลข 8 จำนวน 1103รูป</li>
+                  <li>รูปภาพเลข 9 จำนวน 1105รูป</li>
+                </span>
+                <div className='flex'>
+                  <img className='' src='911 1.png'></img>
+                  <img className='' src='911 2.png'></img>
+                  <img className='' src='911 1.png'></img>
+
+                </div>
+              </div>
             </div>
-          ) : (
-            <div className="mt-4 text-red-400">don't have base64 img</div>
-          )}
-        </div>
+          </div>
+      </div>
+      <div className='h-screen'>
+
       </div>
     </div>
   );

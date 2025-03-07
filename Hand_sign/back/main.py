@@ -1,10 +1,11 @@
 import base64
 import io
+
 import numpy as np
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from PIL import Image
 from number import predict_number
+from PIL import Image
 from pydantic import BaseModel
 
 # ✅ Import ไฟล์ number.py
