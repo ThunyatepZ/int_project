@@ -8,11 +8,10 @@ export default function Navbar() {
           Sign Hand
         </span>
         <div className='flex justify-end gap-6'>
-          <Link href='/Homepage' className='hover:text-violet-400 transition delay-90'>Home</Link>
-          {/* <Link href='/Info' className='hover:text-violet-400 transition delay-90'>Info</Link> */}
           <Link href='/Machine' className='hover:text-violet-400 transition delay-90'>Machine Learning</Link>
           <Link href='/Neural' className='hover:text-violet-400 transition delay-90'>Neural Network</Link>
           <Link href='/DemoMachine' className='hover:text-violet-400 transition delay-90'>Demo Machine Learning</Link>
+          <Link href='/DemoNural' className='hover:text-violet-400 transition delay-90'>Demo Nural network</Link>
 
 
         </div>
