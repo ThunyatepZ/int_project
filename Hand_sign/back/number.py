@@ -1,11 +1,5 @@
 import cv2
 import numpy as np
-from tensorflow.keras.models import load_model
-
-# 📌 โหลดโมเดลจากไฟล์ .h5
-MODEL_PATH = "modelsave/digit_classifier.h5"  # แก้ให้เป็น path ของคุณ
-model = load_model(MODEL_PATH)
-print("✅ โมเดลถูกโหลดสำเร็จ!")
 
 def preprocess_image(image_path):
     """
@@ -24,19 +18,13 @@ def preprocess_image(image_path):
         print(f"❌ Error: {e}")
         return None
 
-def predict_number(image_path):
+def predict_number(model, image_path):
     """
-    ทำนายตัวเลขจากภาพที่กำหนด
+    ทำนายตัวเลขจากภาพที่กำหนด โดยไม่ต้องโหลดโมเดลใหม่
     """
     input_image = preprocess_image(image_path)
     if input_image is None:
         return None
-
-    # 📌 ไม่ต้องแสดงภาพที่ใช้ทดสอบ
-    # plt.imshow(input_image[0, :, :, 0], cmap="gray")
-    # plt.title("🔍 รูปที่ใช้ทดสอบ")
-    # plt.axis("off")
-    # plt.show()
 
     # 📌 ทำนายผลลัพธ์
     prediction = model.predict(input_image)
@@ -44,17 +32,3 @@ def predict_number(image_path):
 
     print(f"🎯 โมเดลคาดเดาว่าเลขในภาพคือ: {predicted_label}")
     return predicted_label
-
-if __name__ == "__main__":
-    import tkinter as tk
-    from tkinter import filedialog
-
-    # 📌 ใช้ tkinter เพื่อเลือกไฟล์ภาพจากเครื่อง
-    root = tk.Tk()
-    root.withdraw()  # ซ่อนหน้าต่างหลัก
-    image_path = filedialog.askopenfilename(title="เลือกภาพที่ต้องการพยากรณ์")
-
-    if image_path:
-        predict_number(image_path)
-    else:
-        print("❌ ไม่ได้เลือกไฟล์")

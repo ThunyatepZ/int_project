@@ -1,29 +1,33 @@
+import { useState } from 'react';
+import axios from 'axios';
 import Navbar from '@/components/Navbar';
 import DrawingCanvas from '@/components/canvas';
-import axios from 'axios'; // :white_check_mark: นำเข้า axios
-import { useState } from 'react';
 
 function DemoNural() {
     const [base64Image, setBase64Image] = useState('');
+    const [loading, setLoading] = useState(false);  // เพิ่มสถานะ loading
 
-    // :white_check_mark: ฟังก์ชันส่ง Base64 ไป FastAPI
     const handleSendToBackend = async () => {
       if (!base64Image) {
         alert("ยังไม่มีภาพ Base64! กรุณาวาดรูปแล้วกด Convert to Base64");
         return;
       }
-  
+
+      setLoading(true);  // ตั้งค่า loading เป็น true ก่อนเริ่มส่งข้อมูล
+
       try {
         const response = await axios.post('https://int-project.onrender.com/predict', { image: base64Image });
-  
-        console.log("์Numer is :", response.data);
-        alert(`Number is : ${response.data.prediction}`);
+
+        console.log("Number is:", response.data);
+        alert(`Number is: ${response.data.prediction}`);
       } catch (error) {
         console.error("Error sending Base64:", error);
         alert("เกิดข้อผิดพลาดในการส่ง Base64");
+      } finally {
+        setLoading(false);  // ตั้งค่า loading เป็น false หลังจากเสร็จสิ้นการส่งข้อมูล
       }
     };
-  
+
     return (
       <div>
         <Navbar />
@@ -36,16 +40,12 @@ function DemoNural() {
             
             {base64Image ? (
               <div className="mt-4 flex flex-col items-center w-full max-w-lg">
-                {/* <textarea
-                  className="w-full h-40 p-2 text-sm bg-gray-800 text-white rounded"
-                  value={base64Image}
-                  readOnly
-                /> */}
                 <button
                   className="mt-2 px-4 py-2 bg-blue-500 text-white rounded"
                   onClick={handleSendToBackend}
+                  disabled={loading}  // ปิดปุ่มระหว่างที่กำลังโหลด
                 >
-                  Send to Backend
+                  {loading ? 'Sending...' : 'Send to Backend'}  {/* เปลี่ยนข้อความเมื่อกำลังโหลด */}
                 </button>
               </div>
             ) : (
@@ -57,4 +57,4 @@ function DemoNural() {
     );
 }
 
-export default DemoNural
+export default DemoNural;
