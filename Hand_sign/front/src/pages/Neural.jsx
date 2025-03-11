@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
+import CodeBlock2 from '@/components/codeblock2';
 import CodeBlock from '@/components/codeblock1';
 
 const Neural = () => {
@@ -52,12 +53,13 @@ const Neural = () => {
       <div className='h-screen' id='tap2'>
         <div className='flex justify-around items-center'>
         <div className='bg-white text-center text-black w-[700px] h-auto rounded-2xl overflow-auto p-4'>
-          <div className='text-xl mt-5'>ขั้นตอนที่1</div>
-          <span>เริ่มต้นมา ผมได้ทำการให้มันอ่านไฟล์เนื่องจากdatasetที่ผมได้มามันเป็น.zipและมีโฟลเดอร์ข้างใน</span>
-          <span>และต่อมาผมได้แบ่งข้อมูลสำหรับการTrainและTestไว้ เป็น 80/20</span>
+          <div className='text-xl mt-5'>ขั้นตอนที่2</div>
+          <span>โค้ดนี้ใช้ TensorFlow ในการโหลดและเตรียมชุดข้อมูลรูปภาพสำหรับการฝึกโมเดล CNN โดยฟังก์ชัน load_image(path) จะโหลดภาพจากพาธ แปลงเป็นภาพขาวดำ ปรับขนาดเป็น 28×28 และทำให้ค่าพิกเซลอยู่ในช่วง 0-1 จากนั้น train_ds และ test_ds จะสร้าง Dataset จากพาธรูปภาพและป้ายกำกับ ใช้ .map() 
+            เพื่อโหลดและแปลงรูปภาพ แล้วจัดกลุ่มเป็น batch ขนาด 32 เพื่อให้เหมาะกับการฝึกโมเดล</span>
+
         </div>
         <div className="w-full max-w-[600px] mb-10">
-            <CodeBlock />
+            <CodeBlock2 />
           </div>
         </div>
 
