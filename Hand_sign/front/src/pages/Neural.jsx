@@ -1,22 +1,22 @@
-import Navbar from '@/components/Navbar';
-import Link from 'next/link';
+import CodeBlock from '@/components/codeblock1';
 import CodeBlock2 from '@/components/codeblock2';
 import CodeBlock3 from '@/components/codeblock3';
-import CodeBlock from '@/components/codeblock1';
+import Navbar from '@/components/Navbar';
+import Link from 'next/link';
 
 const Neural = () => {
   return (
     <div>
       <Navbar />
       <div className='flex justify-center items-center w-full h-screen'>
-        <div className='bg-white text-black w-[900px] h-[500px] rounded-2xl'>
+        <div className='bg-white text-black w-[900px] h-auto mb-10 rounded-2xl '>
           <div className='ml-2 mr-2 mt-5'>
             <span className='flex justify-center mt-2 text-xl'>Machine Learning</span>
             <span className='flex justify-center'>MLตัวนี้เริ่มจากที่กลุ่มผมได้ไปค้นหาData setใน Kaggle จนผมได้ข้อมูลที่ต้องการจะนำมาใช้นั่นก็คือข้อมูลภาพลายมือเลข0-9</span>
             <span className='flex justify-center'>และผมจะแปะลิ่งไว้เผื่อผู้ชมจะไปลองดูครับ {<Link href='https://www.kaggle.com/datasets/aquibiqbal/digits-09'>ที่มา digits-09</Link>}</span>
             <div className='flex justify-around'>
               <div className='mt-5'>
-                <span className='flex flex-col justify-start items-start ml-10 w-52'>
+                <span className='flex flex-col justify-start items-start ml-10 w-52 mb-5'>
                   <div id='header' className='text-xl text-start'>* feature of this Dataset</div>
                   <li>รูปภาพเลข 0 จำนวน 1176รูป</li>
                   <li>รูปภาพเลข 1 จำนวน 1150รูป</li>

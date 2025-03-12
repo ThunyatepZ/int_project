@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import axios from 'axios';
 import Navbar from '@/components/Navbar';
 import DrawingCanvas from '@/components/canvas';
+import axios from 'axios';
+import { useState } from 'react';
 
 function DemoNural() {
     const [base64Image, setBase64Image] = useState('');
@@ -32,7 +32,7 @@ function DemoNural() {
       <div>
         <Navbar />
         <div className='flex justify-center items-center w-screen h-screen'>
-          <div className='absolute flex justify-center w-screen h-screen items-start text-white mt-32 text-xl'>
+          <div className='flex justify-center w-screen h-screen items-start text-white mt-32 text-xl'>
             predicts number 0-9!!!
           </div>
           <div className='absolute flex flex-col justify-center items-center text-white h-full w-screen'>

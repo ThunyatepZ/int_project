@@ -62,7 +62,7 @@ const DrawingCanvas = ({ width = 500, height = 500, color = "black", lw = 40, on
         onMouseUp={stopDrawing}
         onMouseLeave={stopDrawing}
       />
-      <div style={{}}>
+      <div className="mt-5">
         <button className="bg-white p-2 rounded-lg text-black" onClick={clearCanvas}>clear</button>
         <button className="bg-white p-2 rounded-lg text-black ml-2" onClick={convertToBase64}>
           Convert to Base64
