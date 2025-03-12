@@ -29,7 +29,7 @@ function DemoMachine() {
 
     try {
       // ใช้ axios ส่งข้อมูลไปที่ API
-      const response = await axios.post('http://127.0.0.1:8000/predict_sport', formData);
+      const response = await axios.post('https://int-project.onrender.com/predict_sport', formData);
 
       // log ข้อมูลที่ได้รับจาก API
       console.log('API response:', response.data);
