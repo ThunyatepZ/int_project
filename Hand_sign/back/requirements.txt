@@ -12,3 +12,7 @@ pydantic
 opencv-python
 tensorflow
 uvicorn
+scikit-learn
+joblib
+pandas
+kagglehub
