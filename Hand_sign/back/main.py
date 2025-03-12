@@ -1,5 +1,7 @@
 import base64
 import io
+
+import cv2
 import numpy as np
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -7,7 +9,6 @@ from number import predict_number  # ✅ Import ฟังก์ชันทำ�
 from PIL import Image
 from pydantic import BaseModel
 from tensorflow.keras.models import load_model
-import cv2
 
 app = FastAPI()
 
