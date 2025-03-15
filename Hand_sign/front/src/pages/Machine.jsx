@@ -1,8 +1,5 @@
 import Navbar from '@/components/Navbar';
-import axios from 'axios'; // ✅ นำเข้า axios
-import Link from 'next/link';
 import { useState } from 'react';
-import { CircleChevronDown } from '@/components/circledown';
 import CodeBlock_ML from '@/components/code_ml';
 import CodeBlock_ML2 from '@/components/code_ml2';
 import CodeBlock_ML3 from '@/components/code_,ml3';
@@ -24,7 +21,6 @@ function Machine() {
           Recommended Sport/Activity
         </span>
         <div className='w-fit mx-auto mt-20' onClick={() => document.getElementById('tap2').scrollIntoView({ behavior: 'smooth' })}>
-          <CircleChevronDown/>
         </div>
       </span>
 

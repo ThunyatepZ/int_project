@@ -3,7 +3,6 @@ import CodeBlock2 from '@/components/codeblock2';
 import CodeBlock3 from '@/components/codeblock3';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
-import { CircleChevronDown } from '@/components/circledown';
 
 const Neural = () => {
   return (
@@ -19,7 +18,6 @@ const Neural = () => {
           Number Prediction
         </span>
         <div className='w-fit mx-auto mt-20' onClick={() => document.getElementById('tap2').scrollIntoView({ behavior: 'smooth' })}>
-          <CircleChevronDown/>
         </div>
       </span>
 
