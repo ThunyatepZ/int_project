@@ -13,10 +13,13 @@ export default {
       // },
       fontFamily:{
         title:["Dosis"],
-        title2:['Space Grotesk']
+        title2:['Space Grotesk'],
+        title3:['Prompt'],
+        title4:['Sarabun'],
       },
       backgroundImage:{
-        bannerImg:"url('/futuristic-illuminated-hallway-with-beautiful-abstract-light-effects.jpg')"
+        bannerImg:"url('/futuristic-illuminated-hallway-with-beautiful-abstract-light-effects.jpg')",
+        gradient: 'radial-gradient(at 46% 84%, #16213e 0px, transparent 50%), radial-gradient(at 49% 10%, #0f3460 0px, transparent 50%), radial-gradient(at 48% 71%, #533483 0px, transparent 50%), radial-gradient(at 36% 15%, #e94560 0px, transparent 50%), #16213e',
       },
       keyframes: {
         typing: {

@@ -51,8 +51,8 @@ function DemoMachine() {
   return (
     <div>
       <Navbar />
-      <div className="flex justify-center items-center min-h-screen bg-black">
-        <div className="w-[50%] h-auto bg-gray-700 rounded-lg shadow-lg text-white">
+      <div className="flex justify-center items-center min-h-screen">
+        <div className="w-[50%] h-auto bg-gray-700 rounded-lg shadow-lg text-white bg-opacity-55">
           <h1 className="text-3xl font-semibold mb-6 text-center mt-5">Predict Sport Activity</h1>
           <form onSubmit={(e) => e.preventDefault()}>
             <div className="flex mb-4 gap-4">
@@ -152,7 +152,7 @@ function DemoMachine() {
               <button 
                 type="button" 
                 onClick={() => handlePredict('knn')} 
-                className="w-[30%] py-2 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-md"
+                className="w-[30%] py-2 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-md mb-5"
               >
                 Predict with KNN
               </button>
@@ -160,7 +160,7 @@ function DemoMachine() {
               <button 
                 type="button" 
                 onClick={() => handlePredict('dt')} 
-                className="w-[30%] py-2 bg-green-500 hover:bg-green-600 text-white font-bold rounded-md"
+                className="w-[30%] py-2 bg-green-500 hover:bg-green-600 text-white font-bold rounded-md mb-5"
               >
                 Predict with DT
               </button>

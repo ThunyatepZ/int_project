@@ -22,7 +22,7 @@ function Homepage() {
         <div className="w-fit">
           <div className="mb-20 animate-typing delay-100 overflow-hidden whitespace-nowrap border-r-4 border-r-white text-5xl text-white font-bold">
             Welcome!
-            <div className='border-r-white text-5xl text-white font-bold'>to Sign Hand Prediction!</div>
+            <div className='border-r-white text-5xl text-white font-bold'>to our project!</div>
           </div>
         </div>
         <button className='animate-bounce text-white bg-gray-500 px-8 py-3 rounded-xl' onClick={() => document.getElementById('tap2').scrollIntoView({ behavior: 'smooth' })}>
@@ -31,7 +31,6 @@ function Homepage() {
       </div>
       <div id='tap2' className='w-full h-screen text-white'>
         <div className='flex justify-center items-center h-screen text-center'>
-
         </div>
       </div>
     </div>

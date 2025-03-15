@@ -46,6 +46,7 @@ history = model.fit(train_ds, epochs=10, validation_data=test_ds)
 
 loss, acc = model.evaluate(test_ds)
 print(f"Test Accuracy: {acc * 100:.2f}%")
+
 `}</code>
                     </pre>
                 </div>
