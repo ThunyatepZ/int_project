@@ -1,8 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
-import { useState } from 'react'
+
 import CLICK from '../components/click'
-import Foot from '../components/foot'
 import Animation from '../components/animation'
 import Welcome from '@/components/welcome'
 
