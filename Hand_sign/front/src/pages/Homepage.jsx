@@ -1,4 +1,5 @@
 import Navbar from '@/components/Navbar'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { PulseLoader } from 'react-spinners'
 
@@ -25,13 +26,9 @@ function Homepage() {
             <div className='border-r-white text-5xl text-white font-bold'>to our project!</div>
           </div>
         </div>
-        <button className='animate-bounce text-white bg-gray-500 px-8 py-3 rounded-xl' onClick={() => document.getElementById('tap2').scrollIntoView({ behavior: 'smooth' })}>
-          Get Info
+        <button className='animate-bounce text-white bg-gray-500 px-8 py-3 rounded-xl'>
+          <Link href={'/Machine'}>get info</Link>
         </button>
-      </div>
-      <div id='tap2' className='w-full h-screen text-white'>
-        <div className='flex justify-center items-center h-screen text-center'>
-        </div>
       </div>
     </div>
   )
