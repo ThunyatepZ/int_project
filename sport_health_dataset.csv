@@ -1,0 +1,26 @@
+Age,Gender,Health Condition,Fitness Level,Recommended Sport/Activity,Duration,Intensity,Notes
+20,Male,Healthy,Beginner,Running,30 min,Medium,Focus on endurance
+25,Female,Healthy,Intermediate,Cycling,45 min,High,Increase resistance
+30,Male,Healthy,Advanced,Weightlifting,60 min,High,Focus on strength
+35,Female,Hypertension,Beginner,Walking,30 min,Low,Low impact for joints
+40,Male,Healthy,Intermediate,Swimming,45 min,Medium,"Low impact, full body workout"
+45,Female,Diabetes,Beginner,Walking,30 min,Low,Monitor blood sugar levels
+50,Male,Arthritis,Beginner,Swimming,30 min,Low,"Low impact, focus on flexibility"
+55,Female,Healthy,Intermediate,Cycling,45 min,Medium,Good for cardiovascular health
+60,Male,Healthy,Advanced,Running,60 min,High,Focus on stamina
+65,Female,Arthritis,Beginner,Yoga,30 min,Low,Gentle on joints
+28,Male,Healthy,Intermediate,Cycling,45 min,Medium,Focus on leg strength
+33,Female,Healthy,Advanced,Swimming,45 min,Medium,Good for joint mobility
+38,Male,Hypertension,Beginner,Walking,30 min,Low,"Low impact, focus on endurance"
+43,Female,Healthy,Intermediate,Running,60 min,High,Increase strength and endurance
+48,Male,Diabetes,Beginner,Swimming,45 min,Medium,Focus on flexibility
+53,Female,Arthritis,Beginner,Cycling,30 min,Low,Good for cardiovascular health
+58,Male,Healthy,Intermediate,Walking,45 min,Medium,Focus on joint mobility
+63,Female,Healthy,Advanced,Yoga,60 min,High,Strength and flexibility
+23,Male,Healthy,Beginner,Running,30 min,Medium,Endurance and stamina
+27,Female,Healthy,Intermediate,Swimming,45 min,Medium,Full body workout
+32,Male,Healthy,Advanced,Weightlifting,60 min,High,Focus on strength
+37,Female,Healthy,Beginner,Cycling,30 min,Low,Low impact for joints
+42,Male,Healthy,Intermediate,Yoga,30 min,Low,Flexibility and strength
+47,Female,Healthy,Advanced,Swimming,30 min,Medium,Cardio workout
+52,Male,Healthy,Beginner,Walking,45 min,Medium,Focus on stamina
